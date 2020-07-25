@@ -1,0 +1,56 @@
+ASSIGNMENT :1
+Input : [0,1,2,10,4,1,0,56,2,0,1,3,0,56,0,4]
+
+Program:
+
+lst=[0,1,2,10,4,1,0,56,2,0,1,3,0,56,0,4]
+n=len(lst)
+cnt=0
+lst1=[]
+for i in lst:
+    if i != 0:
+        lst1.append(i)
+        cnt+=1
+lst1.sort()
+while cnt < n:
+    lst1.append(0)
+    cnt+=1
+print(lst1)
+
+OUTPUT:
+[1, 1, 1, 2, 2, 3, 4, 4, 10, 56, 56, 0, 0, 0, 0, 0]
+
+
+
+
+ASSIGNMENT-2
+
+
+Input:
+lst1=[10,20,40,60,70,80] sorted List
+lst2=[5,15,25,35,45,60] sorted List
+Merge these two sorted lists to produce one sorted List but use only either While or For only one time'''
+
+Program:
+
+lst1=[10,20,40,60,70,80] 
+lst2=[5,15,25,35,45,60]
+n1 = len(lst1) 
+n2 = len(lst2) 
+r = [] 
+i, j = 0, 0 
+while i < n1 and j < n2: 
+    if lst1[i] < lst2[j]: 
+      r.append(lst1[i]) 
+      i += 1
+    else: 
+      r.append(lst2[j]) 
+      j += 1
+  
+r = r +lst1[i:]+lst2[j:]
+print(r) 
+
+Output :
+
+[5, 10, 15, 20, 25, 35, 40, 45, 60, 60, 70, 80]
+
